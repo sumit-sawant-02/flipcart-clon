@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- Logo -->
+        <a href="index.html">
+            <div class="logo">
+                <img src="./image/flipcart_logo.svg" alt="Flipkart Logo">
+            </div>
+        </a>
+        <!-- Search Bar -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search for Products, Brands and More">
+        </div>
+
+        <!-- Login Section -->
+        <a href="login.html">
+            <div class="login">
+                <img src="./image/login.svg" alt="Login Icon">
+                <span>Login</span>
+                <select>
+                    <option></option>
+                </select>
+            </div>
+        </a>
+        <!-- Cart -->
+        <a href="cart.html">
+            <div class="cart">
+                <img src="./image/header_cart-eed150.svg" alt="Cart Icon">
+                <span>Cart</span>
+            </div>
+        </a>
+        <!-- Become a Seller -->
+        <div class="seller">
+            <img src="./image/Store-.svg" alt="Store Icon">
+            <span>Become a Seller</span>
+        </div>
+
+        <!-- 3 Dots Menu -->
+        <div class="more">
+            <img src="./image/3_dot.svg" alt="More Options">
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left">
+            <div class="address-bar">
+                <p>From Saved Addresses</p>
+                <button>Enter Delivery Pincode</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="./image/faishan-1.webp" alt="Shoe">
+
+                <div class="item-details">
+                    <h3>BRUTON Lite Sports Shoes Running Shoes For Men</h3>
+                    <p>Size: 8, Grey, 8</p>
+                    <p>Seller: <span class="seller">BRUTONFOOTWEAR</span> <span class="assured">✔️ Assured</span></p>
+
+                    <div class="price">
+                        <span class="old">₹2,499</span>
+                        <span class="new">₹373</span>
+                        <span class="off">85% Off</span>
+                    </div>
+
+                    <p class="delivery">Delivery by Mon Oct 20</p>
+
+                    <div class="quantity">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </div>
+
+                    <div class="actions">
+                        <a href="#">SAVE FOR LATER</a>
+                        <a href="#">REMOVE</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="place-order">PLACE ORDER</button>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right">
+            <h3>PRICE DETAILS</h3>
+            <hr>
+            <div class="price-details">
+                <p>Price (1 item) <span>₹2,499</span></p>
+                <p>Discount <span class="green">− ₹2,054</span></p>
+                <p>Coupons for you <span class="green">− ₹72</span></p>
+                <p>Platform Fee <span>₹5</span></p>
+                <hr>
+                <p class="total">Total Amount <span>₹378</span></p>
+                <p class="save green">You will save ₹2,121 on this order</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🔒 Safe and Secure Payments. Easy returns. 100% Authentic products.</p>
+    </footer>
+</body>
+
+</html>

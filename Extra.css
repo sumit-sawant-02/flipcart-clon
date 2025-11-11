@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+}
+
+
+.special-product {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container {
+    height: 90vh;
+    background-color: white;
+    margin: 15px;
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-left: 20px;
+    padding-top: 25px;
+}
+
+.items-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin-top: 10px;
+
+}
+
+.item-card {
+    border: 0.5px solid rgba(128, 128, 128, 0.808);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 6px;
+}
+
+.item-card img {
+    height: 180px;
+    width: 180px;
+}
+
+.item-card h3 {
+    font-weight: 200;
+}
+
+.item-card p {
+    font-weight: 800;
+    font-size: 20px;
+    color: green;
+    margin-top: 5px;
+}
+
+.container-3 {
+    height: 90vh;
+    width: 50%;
+    margin: 15px;
+    background-image: url("https://rukminim1.flixcart.com/www/530/720/promos/26/09/2023/6c3c5fe2-c236-4fa2-8d97-595e1e01da01.jpg?q=80");
+    background-size: cover;
+    background-position: center;
+}

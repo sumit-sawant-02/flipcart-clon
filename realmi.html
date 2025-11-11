@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: #f1f3f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            height: 80vh;
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        /* Left Section */
+        .left {
+            flex: 2;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .address-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .address-bar button {
+            background: none;
+            border: 1px solid #2874f0;
+            color: #2874f0;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cart-item {
+            display: flex;
+            margin-top: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .cart-item img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .item-details {
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        .item-details h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .item-details p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .seller {
+            font-weight: bold;
+        }
+
+        .price {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price .old {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .price .new {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .price .off {
+            color: green;
+            font-size: 14px;
+        }
+
+        .delivery {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .quantity button {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .quantity input {
+            width: 30px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 0 5px;
+            height: 25px;
+        }
+
+        .actions {
+            margin-top: 10px;
+        }
+
+        .actions a {
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 20px;
+            color: #212121;
+        }
+
+        .place-order {
+            margin-top: 20px;
+            background-color: #ff6d00;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .place-order:hover {
+            background-color: #ff4f00;
+        }
+
+        /* Right Section */
+        .right {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .right h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .price-details p {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        .price-details hr {
+            margin: 10px 0;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+
+        .save {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            color: #555;
+            font-size: 13px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./image/flipcart_logo.svg" alt="Flipkart Logo">
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search for Products, Brands and More">
+        </div>
+
+        <!-- Login Section -->
+        <a href="login.html">
+            <div class="login">
+                <img src="./image/login.svg" alt="Login Icon">
+                <span>Login</span>
+                <select>
+                    <option></option>
+                </select>
+            </div>
+        </a>
+        <!-- Cart -->
+        <a href="cart.html">
+            <div class="cart">
+                <img src="./image/header_cart-eed150.svg" alt="Cart Icon">
+                <span>Cart</span>
+            </div>
+        </a>
+        <!-- Become a Seller -->
+        <div class="seller">
+            <img src="./image/Store-.svg" alt="Store Icon">
+            <span>Become a Seller</span>
+        </div>
+
+        <!-- 3 Dots Menu -->
+        <div class="more">
+            <img src="./image/3_dot.svg" alt="More Options">
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left">
+            <div class="address-bar">
+                <p>From Saved Addresses</p>
+                <button>Enter Delivery Pincode</button>
+            </div>
+
+            <div class="cart-item">
+                <img
+                    src="https://rukminim1.flixcart.com/image/240/240/xif0q/mobile/r/4/p/-original-imahf47e6gzt3ggw.jpeg?q=60"
+                alt="Shoe">
+
+                <div class="item-details">
+                    <h3>OPPO K13x 5G 6000mAh and 45W SUPERVOOC Charger & AI (Breeze Blue, 128 GB)</h3>
+                    <p>Size: 8, Grey, 8</p>
+                    <p>Seller: <span class="seller">BRUTONFOOTWEAR</span> <span class="assured">✔️ Assured</span></p>
+
+                    <div class="price">
+                        <span class="old">₹12,999</span>
+                        <span class="new">₹24,999</span>
+                        <span class="off">15% Off</span>
+                    </div>
+
+                    <p class="delivery">Delivery by Mon Oct 20</p>
+
+                    <div class="quantity">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </div>
+
+                    <div class="actions">
+                        <a href="#">SAVE FOR LATER</a>
+                        <a href="#">REMOVE</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="place-order">PLACE ORDER</button>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right">
+            <h3>PRICE DETAILS</h3>
+            <hr>
+            <div class="price-details">
+                <p>Price (1 item) <span>₹12,999</span></p>
+                <p>Discount <span class="green">− ₹1,000</span></p>
+                <p>Coupons for you <span class="green">− ₹72</span></p>
+                <p>Platform Fee <span>₹5</span></p>
+                <hr>
+                <p class="total">Total Amount <span>₹9,999/-</span></p>
+                <p class="save green">You will save ₹2,121 on this order</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🔒 Safe and Secure Payments. Easy returns. 100% Authentic products.</p>
+    </footer>
+</body>
+
+</html>

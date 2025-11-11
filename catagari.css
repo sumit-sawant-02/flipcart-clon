@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.catagri-box {
+    height: 90vh;
+    margin: 30px;
+}
+
+.catagai-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cat-box-img img {
+    height: 300px;
+    width: 480px;
+}
